@@ -1199,9 +1199,9 @@ class GsmModem(SerialComms):
                 # Incoming call (or existing call is ringing)
                 self._handleIncomingCall(lines)
                 return
-            elif line.startswith('$G'):
+            elif line.startswith('$GP'):
                 #GPS Information
-                self.gpsInfoCallback(line)
+                self.gpsInfoCallback(lines)
                 self.log.debug('GPS Info: %r' % line)
                 return
             elif line.startswith('+CMTI'):
