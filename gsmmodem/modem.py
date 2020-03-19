@@ -186,6 +186,8 @@ class GsmModem(SerialComms):
         #Pool of detected DTMF
         self.dtmfpool = []
 
+        log.debug('P2: Initilazed GsmModem....')
+
     def connect(self, pin=None, waitingForModemToStartInSeconds=0):
         """ Opens the port and initializes the modem and SIM card
 
