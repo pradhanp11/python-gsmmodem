@@ -187,8 +187,6 @@ class GsmModem(SerialComms):
         #Pool of detected DTMF
         self.dtmfpool = []
 
-        self.log.debug('P2: Initilazed GsmModem....')
-
     def connect(self, pin=None, waitingForModemToStartInSeconds=0):
         """ Opens the port and initializes the modem and SIM card
 
@@ -1202,7 +1200,6 @@ class GsmModem(SerialComms):
             elif line.startswith('$GP'):
                 #GPS Information
                 self.gpsInfoCallback(lines)
-                self.log.debug('GPS Info: %r' % line)
                 return
             elif line.startswith('+CMTI'):
                 # New SMS message indication
