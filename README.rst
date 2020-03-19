@@ -115,7 +115,7 @@ Building documentation
 This package contains `Sphinx <http://sphinx-doc.org>`_-based documentation.
 To manually build or test the documentation locally, do the following::
 
-   git clone https://github.com/babca/python-gsmmodem.git
+   git clone https://github.com/pradhanp11/python-gsmmodem.git
    cd python-gsmmodem
    pip install .[doc]
    cd doc
