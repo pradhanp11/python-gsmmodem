@@ -78,7 +78,7 @@ Installation of the latest commit from GitHub
 
 Clone from GitHub::
 
-    git clone https://github.com/babca/python-gsmmodem.git
+    git clone https://github.com/pradhanp11/python-gsmmodem.git
     cd python-gsmmodem/
     python setup.py install
 
