@@ -222,12 +222,17 @@ class GsmModem(SerialComms):
         else:
             pinCheckComplete = False
         self.write('ATE0') # echo off
+
+        # ToDo: AT+CFUN=1 is not working. Cehck this
+        """
         try:
             cfun = int(lineStartingWith('+CFUN:', self.write('AT+CFUN?'))[7:]) # example response: +CFUN: 1
             if cfun != 1:
                 self.write('AT+CFUN=1')
         except CommandError:
             pass # just ignore if the +CFUN command isn't supported
+
+        """
 
         self.write('AT+CMEE=1') # enable detailed error messages (even if it has already been set - ATZ may reset this)
         if not pinCheckComplete:
